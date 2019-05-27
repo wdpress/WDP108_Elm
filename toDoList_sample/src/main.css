@@ -1,0 +1,162 @@
+/*
+  elm-hot creates an additional div wrapper around the app to make HMR possible.
+  This could break styling in development mode if you are using Elm UI.
+
+  More context in the issue:
+    https://github.com/halfzebra/create-elm-app/issues/320
+*/
+[data-elm-hot="true"] {
+  height: inherit;
+}
+
+body{
+  font-size: 14px;
+  background-color:#EEEEEE;
+  margin: 56px;
+  text-align: center;
+}
+
+input:focus{
+  border-bottom:2px solid #EF8B17;
+  outline: none;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
+  opacity:0.5;
+}
+
+
+.toDoPage{
+  display: inline-block;
+  width: 500px;
+  background-color: #ffffff;
+  text-align: left;
+  padding: 56px;
+}
+
+.pageTitle{
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 48px;
+}
+
+.createForm {
+}
+
+.createForm_messageInput{
+  font-size: 15px;
+  /*  letter-spacing: 1px;*/
+  width:397px;
+  border: none;
+  border-bottom: 2px solid #EDECED;
+  padding-top: 8px;
+  margin-right: 24px;
+}
+
+.createForm_createButton{
+  font-size: 14px;
+  font-weight: 600;
+  width: 72px;
+  height: 36px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #EF962F;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 32px;
+}
+
+.createForm_createButton:hover{
+  cursor: pointer;
+  opacity:0.5;
+}
+
+.toDoEditForm{
+  padding: 24px 0;
+}
+
+.toDoItem_status_wip{
+  border:0px;
+  width: 28px;
+  height: 28px;
+  background: url(wip.png);
+  margin-right: 8px;
+}
+
+.toDoItem_status_wip:hover{
+  cursor: pointer;
+}
+
+.toDoItem_status_done{
+  border:0px;
+  width: 28px;
+  height: 28px;
+  background: url(done.png);
+  margin-right: 8px;
+}
+
+.toDoItem_status_done:hover{
+  cursor: pointer;
+}
+
+.toDoId{
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.toDoEditForm_messageInput{
+  font-size: 15px;
+  /*  letter-spacing: 1px;*/
+  width:317px;
+  border: none;
+  border-bottom: 2px solid #EDECED;
+  padding-top: 8px;
+  margin-right: 28px;
+}
+
+.toDoEditForm_saveButton{
+  font-size: 14px;
+  width: 60px;
+  height: 28px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #EF962F;
+  border: none;
+  border-radius: 6px;
+}
+
+.toDoEditForm_saveButton:hover{
+  cursor: pointer;
+  opacity:0.5;
+}
+
+.toDoItem{
+  padding: 24px 0;
+}
+
+.toDoItem_message{
+  font-size: 16px;
+  display: inline-block;
+  width:320px;
+  margin-right: 28px;
+}
+
+.toDoItem_editButton{
+  font-size: 14px;
+  width: 60px;
+  height: 28px;
+  text-decoration: none;
+  color: #EF8B17;
+  border: solid 2px #EF8B17;
+  border-radius: 6px;
+}
+
+.toDoItem_editButton:hover{
+  cursor: pointer;
+  opacity:0.5;
+}
