@@ -12,12 +12,12 @@ $ npm i -g create-elm-app
 
 ```
 $ cd minimum_sample
-$ npm i -g create-elm-app
+$ elm-app start
 ```
 
 ToDoアプリケーションを実装したサンプルコードを実行
 
 ```
 $ cd toDoList_sample
-$ npm i -g create-elm-app
+$ elm-app start
 ```
