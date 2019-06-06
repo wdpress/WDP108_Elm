@@ -28,20 +28,18 @@ init =
     , nextId = 0
     }
 
--- (d1)
-type Msg
+type Msg    -- (d1)
     = EnteredMessage String
     | ClickedCreateButton
 
--- (d2)
-update : Msg -> Model -> Model
+update : Msg -> Model -> Model    -- (d2)
 update msg model =
    case msg of
       EnteredMessage message ->
-         { model | message = message }
+         { model | message = message }    --(d3)
 
       ClickedCreateButton ->
-         let    --(d3)
+         let    --(d4)
             newToDo =
                { id = model.nextId
                , message = model.message
@@ -49,9 +47,9 @@ update msg model =
                }
          in
          { model
-            | toDoList = newToDo :: model.toDoList --(d4)
-            , message = ""    --(d5)
-            , nextId = model.nextId + 1    --(d6)
+            | toDoList = newToDo :: model.toDoList --(d5)
+            , message = ""    --(d6)
+            , nextId = model.nextId + 1    --(d7)
          }
 
 view : Model -> Html Msg    --(d1)
